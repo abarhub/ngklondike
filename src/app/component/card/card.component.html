@@ -1,0 +1,7 @@
+<div [ngClass]="color(card.color)" class="card">
+  {{value(card.value)}} -
+  <span *ngIf="card.color===ColorEnum.SPADES">&#9824;</span>
+  <span *ngIf="card.color===ColorEnum.HEART">&#10084;</span>
+  <span *ngIf="card.color===ColorEnum.DIAMOND">"&#9670;</span>
+  <span *ngIf="card.color===ColorEnum.CLUB">&#9827;</span>
+</div>
