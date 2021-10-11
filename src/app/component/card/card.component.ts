@@ -11,34 +11,51 @@ import {ColorEnum} from "../../model/color.enum";
 export class CardComponent implements OnInit {
 
   @Input()
-  card: CardModel= new CardModel(ValueEnum.AS, ColorEnum.SPADES);
+  card: CardModel | null = null;
+
+  @Input()
+  cardStack = false;
 
   ColorEnum = ColorEnum;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  value(value:ValueEnum):string{
+  value(value: ValueEnum): string {
     switch (value) {
-      case ValueEnum.AS:return "1";
-      case ValueEnum.TWO:return "2";
-      case ValueEnum.THREE:return "3";
-      case ValueEnum.FOUR:return "4";
-      case ValueEnum.FIVE:return "5";
-      case ValueEnum.SIX:return "6";
-      case ValueEnum.SEVEN:return "7";
-      case ValueEnum.EIGHT:return "8";
-      case ValueEnum.NINE:return "9";
-      case ValueEnum.TEN:return "10";
-      case ValueEnum.KNIGHT:return "J";
-      case ValueEnum.QUEEN:return "Q";
-      case ValueEnum.KING:return "K";
+      case ValueEnum.AS:
+        return "1";
+      case ValueEnum.TWO:
+        return "2";
+      case ValueEnum.THREE:
+        return "3";
+      case ValueEnum.FOUR:
+        return "4";
+      case ValueEnum.FIVE:
+        return "5";
+      case ValueEnum.SIX:
+        return "6";
+      case ValueEnum.SEVEN:
+        return "7";
+      case ValueEnum.EIGHT:
+        return "8";
+      case ValueEnum.NINE:
+        return "9";
+      case ValueEnum.TEN:
+        return "10";
+      case ValueEnum.KNIGHT:
+        return "J";
+      case ValueEnum.QUEEN:
+        return "Q";
+      case ValueEnum.KING:
+        return "K";
     }
   }
 
-  signe(color:ColorEnum):string{
+  signe(color: ColorEnum): string {
     switch (color) {
       case ColorEnum.SPADES:
         return "&#9824;";
@@ -51,7 +68,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-  color(color:ColorEnum):string{
+  color(color: ColorEnum): string {
     switch (color) {
       case ColorEnum.SPADES:
       case ColorEnum.CLUB:

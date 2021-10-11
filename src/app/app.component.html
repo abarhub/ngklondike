@@ -1,12 +1,21 @@
 
 <div class="d-flex w-100">
-<div dragula="PILE_SRC" style="border: solid; border-bottom-color: green; width: 200px">
-  <app-card [card]="card"></app-card>
+  <div style="width: 200px">
+
+  </div>
+  <div  style="border: solid; border-bottom-color: green; width: 200px">
+    <app-card [card]="null" [cardStack]="true" (click)="selectDeck()"></app-card>
+  </div>
+  <div style="width: 200px">
+
+  </div>
+<div dragula="PILE_SRC" style="border: solid; border-bottom-color: green; width: 200px" id="aaa">
+  <app-card [card]="cardVisible"></app-card>
 </div>
   <div style="width: 200px">
 
   </div>
-<div dragula="PILE_SRC" style="border: solid; border-bottom-color: green; width: 200px">
+<div dragula="PILE_SRC" style="border: solid; border-bottom-color: green; width: 200px" id="bbb">
 
 </div>
 
